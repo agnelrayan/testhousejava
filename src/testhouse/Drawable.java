@@ -1,0 +1,18 @@
+package testhouse;
+
+interface Drawable{
+    void draw();
+}
+//Implementation: by second user
+class Rectangles implements Drawable{
+    public void draw(){System.out.println("drawing rectangle");}
+}
+class Circles implements Drawable{
+    public void draw(){System.out.println("drawing circle");}
+}
+//Using interface: by third user
+class TestInterface1{
+    public static void main(String args[]){
+        Drawable d=new Circles();//In real scenario, object is provided by method e.g. getDrawable()
+        d.draw();
+    }}
